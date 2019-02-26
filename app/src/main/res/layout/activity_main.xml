@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circle"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_wifi_white"
+                        android:tint="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_virksomhedsnavn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="PLANETELECOM"
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btn_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="@color/colorbutton"
+                    android:src="@drawable/delete"
+                    android:tint="#fff"
+                    app:backgroundTint="#fff" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_reset"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_personIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_person_white"
+                        android:tint="#fff" />
+
+                    <EditText
+                        android:id="@+id/et_fornavn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/imgView_personIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/imgView_personIcon"
+                        android:background="@color/colorGrey"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøåÖöÄä .-"
+                        android:hint="Fulde navn"
+                        android:inputType="textCapSentences"
+                        android:maxLength="30"
+                        android:paddingLeft="20dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_phoneIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_phone_white"
+                        android:tint="#fff" />
+
+                    <EditText
+                        android:id="@+id/et_kundetlf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/imgView_phoneIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/imgView_phoneIcon"
+                        android:background="@color/colorGrey"
+                        android:digits="+1234567890 "
+                        android:hint="Telefon"
+                        android:inputType="phone"
+                        android:maxLength="20"
+                        android:paddingLeft="20dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_produktIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_product_white"
+                        android:tint="#fff" />
+
+                    <EditText
+                        android:id="@+id/et_produkt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/imgView_produktIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/imgView_produktIcon"
+                        android:background="@color/colorGrey"
+                        android:hint="Produkt"
+                        android:inputType="textCapSentences"
+                        android:maxLength="45"
+                        android:paddingLeft="20dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_imeiIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp"
+                        android:src="@drawable/imei"
+                        android:tint="#fff" />
+
+                    <EditText
+                        android:id="@+id/et_imei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/imgView_imeiIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/imgView_imeiIcon"
+                        android:background="@color/colorGrey"
+                        android:digits="1234567890 "
+                        android:hint="Imei"
+                        android:inputType="number"
+                        android:maxLength="30"
+                        android:paddingLeft="20dp"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <ImageView
+                                android:id="@+id/imgView_reparationIcon1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@color/colorPrimary"
+                                android:padding="8dp"
+                                android:src="@drawable/repair"
+                                android:tint="#fff" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/et_repair"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/imgView_reparationIcon1"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/imgView_reparationIcon1"
+                                android:background="@color/colorGrey"
+                                android:completionThreshold="1"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøåÖöÄä "
+                                android:hint="Reparation"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapSentences"
+                                android:maxLength="25"
+                                android:paddingLeft="20dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="4">
+
+                            <ImageView
+                                android:id="@+id/imgView_priceIcon1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@color/colorPrimary"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_price_white"
+                                android:tint="#fff" />
+
+                            <EditText
+                                android:id="@+id/et_pris"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/imgView_priceIcon1"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/imgView_priceIcon1"
+                                android:background="@color/colorGrey"
+                                android:digits="1234567890"
+                                android:hint="Pris"
+                                android:inputType="numberDecimal"
+                                android:nextFocusDown="@id/et_repair2"
+                                android:paddingLeft="20dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <ImageView
+                                android:id="@+id/imgView_reparationIcon2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@color/colorPrimary"
+                                android:padding="8dp"
+                                android:src="@drawable/repair"
+                                android:tint="#fff" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/et_repair2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/imgView_reparationIcon2"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/imgView_reparationIcon2"
+                                android:background="@color/colorGrey"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøåÖöÄä "
+                                android:hint="Reparation"
+                                android:completionThreshold="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapSentences"
+                                android:maxLength="25"
+                                android:paddingLeft="20dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="4">
+
+                            <ImageView
+                                android:id="@+id/imgView_priceIcon2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@color/colorPrimary"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_price_white"
+                                android:tint="#fff" />
+
+                            <EditText
+                                android:id="@+id/et_pris2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/imgView_priceIcon2"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/imgView_priceIcon2"
+                                android:background="@color/colorGrey"
+                                android:digits="1234567890"
+                                android:hint="Pris"
+                                android:inputType="numberDecimal"
+                                android:nextFocusDown="@id/et_repair3"
+                                android:paddingLeft="20dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout6"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <ImageView
+                                android:id="@+id/imgView_reparationIcon3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@color/colorPrimary"
+                                android:padding="8dp"
+                                android:src="@drawable/repair"
+                                android:tint="#fff" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/et_repair3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/imgView_reparationIcon3"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/imgView_reparationIcon3"
+                                android:background="@color/colorGrey"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøåÖöÄä "
+                                android:hint="Reparation"
+                                android:completionThreshold="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapSentences"
+                                android:maxLength="25"
+                                android:paddingLeft="20dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="4">
+
+                            <ImageView
+                                android:id="@+id/imgView_priceIcon3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@color/colorPrimary"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_price_white"
+                                android:tint="#fff" />
+
+                            <EditText
+                                android:id="@+id/et_pris3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/imgView_priceIcon3"
+                                android:layout_alignParentTop="true"
+                                android:layout_toRightOf="@id/imgView_priceIcon3"
+                                android:background="@color/colorGrey"
+                                android:digits="1234567890"
+                                android:hint="Pris"
+                                android:inputType="numberDecimal"
+                                android:paddingLeft="20dp"
+                                android:singleLine="true"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout7"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/btnAfhentning"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:padding="8dp"
+                        android:src="@drawable/calendar"
+                        android:tint="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_afhentning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/btnAfhentning"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/btnAfhentning"
+                        android:background="@color/colorGrey"
+                        android:gravity="center_vertical"
+                        android:hint="Vælg dato"
+                        android:paddingLeft="20dp"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout8"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp">
+
+                    <Button
+                        android:id="@+id/btn_activityMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorbutton"
+                        android:text="FÆRDIG"
+                        android:textColor="#fff" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

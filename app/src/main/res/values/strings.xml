@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Kvitteringer</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string-array name="repair">
+        <item>Skærm</item>
+        <item>Batteri</item>
+        <item>Bagcover</item>
+        <item>Opladningsport</item>
+        <item>Tastatur</item>
+        <item>Vandskade</item>
+        <item>Software opdatering</item>
+        <item>HDMI port</item>
+    </string-array>
+</resources>
